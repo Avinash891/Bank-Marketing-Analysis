@@ -60,7 +60,7 @@ A comprehensive Power BI and MySQL analytics solution analyzing 45,211 customer 
 - Contact Type, Campaign Attempts, Previous Outcome
 - Subscription Result (Target)
 
-## 🗄️ SQL Queries Included
+##  SQL Queries Included
 
 ### 1. Conversion Rate by Job Type 
 SELECT job, 
@@ -70,10 +70,10 @@ SELECT job,
 FROM bank_marketing
 GROUP BY job
 ORDER BY conversion_rate DESC;
-```
 
-### 2. Monthly Campaign Performance
-```sql
+
+###  2. Monthly Campaign Performance
+
 SELECT month,
        COUNT(*) as contacts,
        SUM(CASE WHEN y = 'yes' THEN 1 ELSE 0 END) as conversions,
@@ -81,10 +81,10 @@ SELECT month,
 FROM bank_marketing
 GROUP BY month
 ORDER BY conv_rate DESC;
-```
+
 
 ### 3. Contact Frequency Effectiveness
-```sql
+
 SELECT campaign as contact_attempts,
        COUNT(*) as customers,
        ROUND(AVG(CASE WHEN y = 'yes' THEN 1 ELSE 0 END) * 100, 2) as conversion_rate
@@ -92,7 +92,7 @@ FROM bank_marketing
 GROUP BY campaign
 HAVING COUNT(*) > 100
 ORDER BY campaign;
-```
+
 
 ##  How to Use
 
@@ -118,10 +118,41 @@ ORDER BY campaign;
 3. Timing matters: Target campaigns during peak conversion months
 4. Balance targeting: Focus on mid-to-high balance customers
 
-### **Long-term Strategy:**
+### Long-term Strategy:
 1. Develop segment-specific messaging for students vs. retirees
 2. Implement predictive model using previous campaign outcomes
 3. Test different contact methods for different demographics
 4. A/B test optimal timing within high-conversion months
 
 ## 📊 Project Structure
+Bank-Marketing-Analysis/
+│
+├── README.md
+├── bank-full.csv                    # Dataset
+├── Bank_Marketing_Dashboard.pbix    # Power BI file
+├── SQL_Queries/
+│   ├── conversion_analysis.sql
+│   ├── segment_performance.sql
+│   └── contact_optimization.sql
+└── Screenshots/
+└── dashboard_preview.png
+## 🎓 Skills Demonstrated
+- SQL query writing and optimization
+- Exploratory Data Analysis (EDA)
+- Power BI dashboard development
+- DAX measure creation
+- Statistical analysis and interpretation
+- Business insight generation
+- Data-driven recommendation formulation
+
+## 📧 Contact
+Avinash Nannapaneni
+- LinkedIn: [linkedin.com/in/avinash-nannapaneni-526851302](https://www.linkedin.com/in/avinash-nannapaneni-526851302)
+- Email: avinashnannapaneni08@gmail.com
+- GitHub: [github.com/Avinash891](https://github.com/Avinash891)
+
+---
+
+⭐ If you found this analysis helpful, please star this repository!
+
+
