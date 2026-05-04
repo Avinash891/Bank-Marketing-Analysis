@@ -108,7 +108,7 @@ ORDER BY campaign;
 3. Modify queries for specific business questions
 
 ##  Dashboard Preview
-[Add screenshot of your dashboard here]
+
 
 ##  Business Recommendations
 
